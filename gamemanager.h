@@ -5,6 +5,7 @@
 #include "ball.h"
 #include "player.h"
 #include <stdlib.h>
+#include <math.h>
 
 typedef struct gamemanager{
     player player1, player2; //Player 1 à gauche, Player 2 à droite

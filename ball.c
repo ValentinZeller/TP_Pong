@@ -6,8 +6,12 @@ gameObject getBallObj(ball balle) {
 int getBallVelocity(ball balle) {
     return balle.nVelocity;
 }
-vect2D getBallDirection(ball balle) {
-    return balle.direction;
+float getBallDirectionX(ball balle) {
+    return balle.fltBallDirectionX;
+}
+
+float getBallDirectionY(ball balle) {
+    return balle.fltBallDirectionY;
 }
 
 void setBallObj(ball *pBalle, gameObject object) {
@@ -16,14 +20,18 @@ void setBallObj(ball *pBalle, gameObject object) {
 void setBallVelocity(ball *pBalle,int veloc) {
     pBalle->nVelocity = veloc;
 }
-void setBallDirection(ball*pBalle, vect2D drct) {
-    pBalle->direction = drct;
+void setBallDirectionX(ball*pBalle, float drctX) {
+    pBalle->fltBallDirectionX = drctX;
+}
+void setBallDirectionY(ball*pBalle, float drctY) {
+    pBalle->fltBallDirectionY = drctY;
 }
 
-ball initBall(gameObject object, int veloc, vect2D drct) {
+ball initBall(gameObject object, int veloc, float drctX,float drctY) {
     ball ballTemp;
     setBallObj(&ballTemp,object);
     setBallVelocity(&ballTemp,veloc);
-    setBallDirection(&ballTemp,drct);
+    setBallDirectionX(&ballTemp,drctX);
+    setBallDirectionY(&ballTemp,drctY);
     return ballTemp;
 }

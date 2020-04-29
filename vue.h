@@ -2,7 +2,7 @@
 //Fichier : vue.h
 //
 //Classe : sdl_manager
-//Description : Gestion de l'affichage avec la SDL
+//Description : Gestion de l'affichage globale avec la SDL
 //Attributs :
 //
 //Notes :
@@ -15,7 +15,6 @@
 #include "sdlmanager.h"
 #include "sprite.h"
 #include "player.h"
-
 
 extern void displayScore(sdl_manager* sdl,player player,int nPosX);
 extern void displayGame(sdl_manager* sdl,sprite* balle, sprite* player1, sprite* player2,gameManager* manager);

@@ -6,16 +6,18 @@
 typedef struct ball {
     gameObject obj;
     int nVelocity;
-    vect2D direction;
+    float fltBallDirectionX, fltBallDirectionY;
 }ball, Ball;
 
 extern gameObject getBallObj(ball balle);
 extern int getBallVelocity(ball balle);
-extern vect2D getBallDirection(ball balle);
+extern float getBallDirectionX(ball balle);
+extern float getBallDirectionY(ball balle);
 
 extern void setBallObj(ball *pBalle, gameObject object);
 extern void setBallVelocity(ball *pBalle,int veloc);
-extern void setBallDirection(ball *pBalle,vect2D drct);
+extern void setBallDirectionX(ball *pBalle,float drctX);
+extern void setBallDirectionY(ball *pBalle,float drctY);
 
-extern ball initBall(gameObject object, int veloc, vect2D drct);
+extern ball initBall(gameObject object, int veloc, float drctX, float drctY);
 #endif // BALL_H_INCLUDED
